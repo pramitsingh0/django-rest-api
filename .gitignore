@@ -1,0 +1,6 @@
+.venv
+backend/api/__pycache__
+backend/api/migrations/__pycache__
+backend/products/__pycache__
+backend/backend/__pycache__
+backend/products/migrations/__pycache__
