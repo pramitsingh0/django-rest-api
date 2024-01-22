@@ -21,3 +21,14 @@ def api_home(request, *args, **kwargs):
     data = ProductSerializer(instance).data
 
     return Response(data)
+
+
+@api_view(["POST"])
+def create_product(request, *args, **kwargs):
+    product_serializer = ProductSerializer(data=request.data)
+    data = {}
+    if product_serializer.is_valid(raise_exception=True):
+        product_serializer.save()
+        data = product_serializer.data
+        return Response(data)
+    return Response({"error": "Invalid Data"}, status=401)
