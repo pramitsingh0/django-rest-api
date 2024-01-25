@@ -4,7 +4,7 @@ endpoint = "http://localhost:8000/"
 
 response = requests.post(
     endpoint + "api/products",
-    json={"title": "Logitech G102", "description": "A good mouse", "price": 1600},
+    json={"title": "iQOO Neo 7", "description": "A good smart phone", "price": 26000},
 )
 
 print(response.text)
